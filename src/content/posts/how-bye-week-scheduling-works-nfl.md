@@ -1,12 +1,19 @@
 ---
-title: "How Bye Week Scheduling Works in the NFL"
-metaDescription: "A complete breakdown of how NFL bye weeks are scheduled, why teams get them at different times, and what it means for fans and fantasy football managers."
-league: "NFL"
-ruling: "Every team gets exactly one bye week between Week 5 and Week 14, decided by the league's schedule-makers, not by team request."
-date: 2026-07-26
-tags: ["scheduling", "bye week", "fantasy football"]
-image: "/images/posts/nfl-bye-week-scheduling.webp"
-imageAlt: "NFL bye week schedule chart with team helmets and football"
+title: How Bye Week Scheduling Works in the NFL
+metaDescription: >-
+  A complete breakdown of how NFL bye weeks are scheduled, why teams get them at
+  different times, and what it means for fans and fantasy football managers.
+league: NFL
+ruling: >-
+  Every team gets exactly one bye week between Week 5 and Week 14, decided by
+  the league's schedule-makers, not by team request.
+date: '2026-07-26T00:00:00.000Z'
+tags:
+  - scheduling
+  - bye week
+  - fantasy football
+image: /images/posts/nfl-bye-week-scheduling.webp
+imageAlt: NFL bye week schedule chart with team helmets and football
 ---
 
 ## What is a bye week
@@ -24,6 +31,8 @@ In the 2026 NFL season, bye weeks begin in Week 5 and continue through Week 14, 
 ## How the league actually decides bye week placement
 
 Bye weeks aren't handed out by request, and teams don't get input on which week they land on. Instead, the NFL's schedule-makers determine bye placement based on a mix of factors including stadium availability, international and cross-country travel demands, and competitive fairness across the league.
+
+![How Bye Week Scheduling Works in the NFL](/images/posts/nfl-bye-week-scheduling-2.webp)
 
 A few specific factors drive the placement:
 
@@ -45,6 +54,8 @@ A team's bye week is not fixed from season to season. A team that had its bye in
 ## What this means for fantasy football managers
 
 Bye weeks are one of the more disruptive parts of a fantasy football season because a player's real-life team having a bye means that player is unavailable for that week, regardless of form or matchup.
+
+![How Bye Week Scheduling Works in the NFL](/images/posts/nfl-bye-week-scheduling-3.webp)
 
 A few practical approaches fantasy managers use to handle this:
 
