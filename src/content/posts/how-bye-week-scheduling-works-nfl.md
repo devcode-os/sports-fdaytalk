@@ -5,6 +5,8 @@ league: "NFL"
 ruling: "Every team gets exactly one bye week between Week 5 and Week 14, decided by the league's schedule-makers, not by team request."
 date: 2026-07-26
 tags: ["scheduling", "bye week", "fantasy football"]
+image: "/images/posts/nfl-bye-week-scheduling.webp"
+imageAlt: "NFL bye week schedule chart with team helmets and football"
 ---
 
 ## What is a bye week
