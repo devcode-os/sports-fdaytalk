@@ -1,0 +1,63 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  title: string;
+  metaDescription: string;
+  league: string;
+  ruling: string;
+  date: Date;
+  updated?: Date;
+  tags: string[];
+}
+
+const { title, metaDescription, league, ruling, date, updated, tags } = Astro.props;
+
+const allPosts = await getCollection('posts');
+const related = allPosts
+  .filter(p => p.data.league === league && p.data.title !== title)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<BaseLayout title={`${title} | SportsRulesDesk`} description={metaDescription} current={league.toLowerCase()}>
+  <div class="wrap">
+    <div class="article-head">
+      <span class={`league-chip ${league}`} style="display:inline-block;margin-bottom:16px;">{league} &middot; Rules Explained</span>
+      <h1>{title}</h1>
+      <p style="color:var(--chalk-dim); font-family:var(--f-mono); font-size:13px;">
+        Published {dateStr}{updated && ` · Updated ${updated.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}`}
+      </p>
+    </div>
+
+    <div class="ruling-card">
+      <span class="ruling-label">The Ruling</span>
+      <p class="ruling-text">{ruling}</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <article class="article-body">
+      <slot />
+    </article>
+
+    {related.length > 0 && (
+      <div class="related">
+        <h2>More {league} Rules Explained</h2>
+        <div class="grid">
+          {related.map(p => (
+            <a href={`/posts/${p.id}/`} class="card" style="text-decoration:none;">
+              <span class="card-meta">
+                <span class={`league-chip ${p.data.league}`}>{p.data.league}</span>
+              </span>
+              <h3>{p.data.title}</h3>
+              <p>{p.data.metaDescription}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</BaseLayout>

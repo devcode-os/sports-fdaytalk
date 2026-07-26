@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const leagues = ['nfl', 'nba', 'mlb', 'nhl', 'ncaa', 'fantasy'];
+  const allPosts = await getCollection('posts');
+
+  return leagues.map(league => {
+    const posts = allPosts
+      .filter(p => p.data.league.toLowerCase() === league)
+      .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+    return { params: { league }, props: { league, posts } };
+  });
+}
+
+const { league, posts } = Astro.props;
+const label = league.toUpperCase() === 'FANTASY' ? 'Fantasy' : league.toUpperCase();
+---
+<BaseLayout
+  title={`${label} Rules Explained | SportsRulesDesk`}
+  description={`Every ${label} rule explained in plain English: penalties, scoring, and how the rulebook actually works.`}
+  current={league}
+>
+  <div class="wrap">
+    <section class="hero" style="padding-bottom:24px;">
+      <span class="hero-eyebrow">{label}</span>
+      <h1>{label} Rules Explained</h1>
+      <p>Plain-English breakdowns of every {label} rule, penalty, and scoring quirk, sourced from the official rulebook.</p>
+    </section>
+
+    <div class="grid">
+      {posts.map(post => (
+        <a href={`/posts/${post.id}/`} class="card" style="text-decoration:none;">
+          <span class="card-meta">
+            <span class={`league-chip ${post.data.league}`}>{post.data.league}</span>
+          </span>
+          <h3>{post.data.title}</h3>
+          <p>{post.data.metaDescription}</p>
+          <div class="card-ruling">{post.data.ruling}</div>
+        </a>
+      ))}
+      {posts.length === 0 && <p style="color:var(--chalk-dim);">No articles published yet for this league.</p>}
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Privacy Policy | SportsRulesDesk"
+  description="Privacy policy for SportsRulesDesk, covering cookies, advertising, and analytics data collection."
+  current=""
+>
+  <div class="wrap page-body">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+
+    <h2>Information we collect</h2>
+    <p>
+      SportsRulesDesk may use standard web analytics to understand aggregate traffic
+      patterns, such as pages visited and general location at a country or city level.
+      We do not require account creation or collect personal information to read articles.
+    </p>
+
+    <h2>Cookies and advertising</h2>
+    <p>
+      This site may display advertising served by third-party networks such as Google
+      AdSense. These networks may use cookies or similar technologies to serve ads based
+      on your prior visits to this or other websites. You can opt out of personalized
+      advertising through your browser settings or via
+      <a href="https://adssettings.google.com" target="_blank" rel="nofollow noopener">Google's Ads Settings</a>.
+    </p>
+
+    <h2>Third-party links</h2>
+    <p>
+      Articles may link to official league websites or other external sources. We are not
+      responsible for the privacy practices of external sites.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy can be sent to <a href="mailto:contact@sports.fdaytalk.com">contact@sports.fdaytalk.com</a>.
+    </p>
+  </div>
+</BaseLayout>

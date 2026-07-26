@@ -1,0 +1,24 @@
+---
+const { current = '' } = Astro.props;
+const links = [
+  { href: '/', label: 'Home', key: 'home' },
+  { href: '/rules/nfl/', label: 'NFL', key: 'nfl' },
+  { href: '/rules/nba/', label: 'NBA', key: 'nba' },
+  { href: '/rules/fantasy/', label: 'Fantasy', key: 'fantasy' },
+  { href: '/about/', label: 'About', key: 'about' },
+];
+---
+<header class="masthead">
+  <div class="wrap masthead-row">
+    <a href="/" style="text-decoration:none;">
+      <div class="brand">Sports<span>Rules</span>Desk
+        <span class="brand-tag">fdaytalk.com</span>
+      </div>
+    </a>
+    <nav class="nav">
+      {links.map(l => (
+        <a href={l.href} class={current === l.key ? 'active' : ''}>{l.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>

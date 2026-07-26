@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+:root {
+  /* Color tokens — "officiating" identity, not a single team's colors */
+  --ink: #0B1220;        /* near-black navy background */
+  --chalk: #F5F3EE;      /* chalk white text/cards */
+  --chalk-dim: #C9C6BE;
+  --flag: #FFB800;       /* penalty-flag gold — primary accent */
+  --card-red: #D6202C;   /* referee-card red — violation/penalty */
+  --whistle-green: #1E824C; /* legal/allowed callouts */
+  --line: rgba(245, 243, 238, 0.12);
+  --surface: #111A2C;
+  --surface-raised: #16213A;
+
+  /* Type */
+  --f-display: 'Archivo Black', 'Barlow Condensed', sans-serif;
+  --f-condensed: 'Barlow Condensed', sans-serif;
+  --f-body: 'Inter', sans-serif;
+  --f-mono: 'JetBrains Mono', monospace;
+
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--chalk);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--flag); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--flag); outline-offset: 2px; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3 {
+  font-family: var(--f-condensed);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  margin: 0 0 0.5em;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ── Header / masthead ── */
+.masthead {
+  background: var(--surface);
+  border-bottom: 3px solid var(--flag);
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.masthead-row { display: flex; align-items: center; gap: 24px; }
+.brand {
+  font-family: var(--f-display);
+  font-size: 22px;
+  color: var(--chalk);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.brand span { color: var(--flag); }
+.brand-tag {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--chalk-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-left: 10px;
+  border-left: 1px solid var(--line);
+  padding-left: 10px;
+}
+.nav { margin-left: auto; display: flex; gap: 4px; flex-wrap: wrap; }
+.nav a {
+  color: var(--chalk-dim);
+  font-family: var(--f-condensed);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 7px 12px;
+  border-radius: 6px;
+  transition: 0.15s;
+}
+.nav a:hover, .nav a.active {
+  color: var(--ink);
+  background: var(--flag);
+  text-decoration: none;
+}
+
+/* ── Hero ── */
+.hero {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+.hero-eyebrow {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--flag);
+  margin-bottom: 14px;
+  display: block;
+}
+.hero h1 {
+  font-family: var(--f-display);
+  font-size: clamp(32px, 5vw, 54px);
+  max-width: 16ch;
+}
+.hero p {
+  color: var(--chalk-dim);
+  max-width: 60ch;
+  font-size: 17px;
+}
+
+/* ── League filter strip ── */
+.league-strip {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 28px 0 8px;
+}
+.league-chip {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--chalk-dim);
+}
+.league-chip.NFL { border-color: #4F7DF3; color: #8FB0FF; }
+.league-chip.NBA { border-color: #E0672A; color: #FFA36B; }
+.league-chip.MLB { border-color: #4F7DF3; color: #8FB0FF; }
+.league-chip.NHL { border-color: #9BA3AF; color: var(--chalk); }
+.league-chip.NCAA { border-color: var(--flag); color: var(--flag); }
+.league-chip.Fantasy { border-color: var(--whistle-green); color: #6FD79A; }
+
+/* ── Post grid / cards ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 32px 0 64px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.card:hover { transform: translateY(-3px); border-color: var(--flag); }
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--chalk-dim);
+}
+.card h3 {
+  font-size: 21px;
+  color: var(--chalk);
+}
+.card h3 a { color: inherit; }
+.card h3 a:hover { color: var(--flag); text-decoration: none; }
+.card p { color: var(--chalk-dim); font-size: 14.5px; margin: 0; }
+.card-ruling {
+  margin-top: auto;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--flag);
+  border-top: 1px dashed var(--line);
+  padding-top: 10px;
+}
+
+/* ── Signature element: the Ruling card ── */
+.ruling-card {
+  background: linear-gradient(135deg, var(--surface-raised), var(--surface));
+  border: 1px solid var(--flag);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin: 28px 0 32px;
+  position: relative;
+  overflow: hidden;
+}
+.ruling-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 6px;
+  background: var(--flag);
+}
+.ruling-label {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--flag);
+  display: block;
+  margin-bottom: 8px;
+}
+.ruling-text {
+  font-family: var(--f-condensed);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--chalk);
+  line-height: 1.25;
+}
+
+/* ── Article body ── */
+.article-head { padding: 44px 0 8px; border-bottom: 1px solid var(--line); }
+.article-head h1 { font-size: clamp(28px, 4.5vw, 42px); max-width: 22ch; }
+.article-body {
+  max-width: 72ch;
+  padding: 32px 0 60px;
+  font-size: 17px;
+}
+.article-body h2 {
+  font-size: 26px;
+  margin-top: 1.6em;
+  padding-top: 0.4em;
+  border-top: 1px solid var(--line);
+}
+.article-body h2:first-child { border-top: none; margin-top: 0; }
+.article-body h3 { font-size: 20px; color: var(--flag); margin-top: 1.4em; }
+.article-body p { margin: 0 0 1.1em; color: #E6E3DC; }
+.article-body ul, .article-body ol { color: #E6E3DC; padding-left: 1.3em; margin-bottom: 1.2em; }
+.article-body li { margin-bottom: 0.4em; }
+.article-body code {
+  font-family: var(--f-mono);
+  background: var(--surface);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+.article-body blockquote {
+  border-left: 3px solid var(--flag);
+  margin: 1.4em 0;
+  padding: 4px 0 4px 18px;
+  color: var(--chalk-dim);
+  font-style: italic;
+}
+.article-body a { text-underline-offset: 2px; }
+
+/* callouts inside markdown, used via :global blockquote variants */
+.callout-legal, .callout-violation {
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 1.4em 0;
+  font-family: var(--f-body);
+}
+.callout-legal { background: rgba(30,130,76,0.12); border-left: 4px solid var(--whistle-green); }
+.callout-violation { background: rgba(214,32,44,0.12); border-left: 4px solid var(--card-red); }
+
+/* ── Related / footer ── */
+.related { padding: 20px 0 60px; border-top: 1px solid var(--line); margin-top: 40px; }
+.related h2 { font-size: 20px; font-family: var(--f-condensed); color: var(--chalk-dim); margin-bottom: 16px; }
+
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  padding: 40px 0 30px;
+  margin-top: 40px;
+}
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.footer-links a { color: var(--chalk-dim); font-size: 14px; }
+.footer-note {
+  color: var(--chalk-dim);
+  font-size: 12.5px;
+  margin-top: 20px;
+  max-width: 70ch;
+}
+
+/* ── Static pages ── */
+.page-body {
+  max-width: 72ch;
+  padding: 44px 0 64px;
+  font-size: 16.5px;
+  color: #E6E3DC;
+}
+.page-body h1 { color: var(--chalk); margin-bottom: 0.3em; }
+.page-body h2 { font-size: 22px; margin-top: 1.4em; color: var(--flag); }
+
+@media (max-width: 640px) {
+  .masthead-row { flex-wrap: wrap; }
+  .nav { width: 100%; order: 3; }
+}
