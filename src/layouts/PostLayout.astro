@@ -10,9 +10,11 @@ interface Props {
   date: Date;
   updated?: Date;
   tags: string[];
+  image?: string;
+  imageAlt?: string;
 }
 
-const { title, metaDescription, league, ruling, date, updated, tags } = Astro.props;
+const { title, metaDescription, league, ruling, date, updated, tags, image, imageAlt } = Astro.props;
 
 const allPosts = await getCollection('posts');
 const related = allPosts
@@ -36,6 +38,10 @@ const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long
       <span class="ruling-label">The Ruling</span>
       <p class="ruling-text">{ruling}</p>
     </div>
+
+    {image && (
+      <img src={image} alt={imageAlt || title} style="width:100%;border-radius:10px;margin-bottom:24px;aspect-ratio:16/9;object-fit:cover;" />
+    )}
   </div>
 
   <div class="wrap">

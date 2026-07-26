@@ -32,6 +32,7 @@ const leagues = ['NFL', 'NBA', 'MLB', 'NHL', 'NCAA', 'Fantasy'];
     <div class="grid">
       {posts.map(post => (
         <a href={`/posts/${post.id}/`} class="card" style="text-decoration:none;">
+          {post.data.image && <img src={post.data.image} alt={post.data.imageAlt || post.data.title} style="border-radius:8px;margin-bottom:4px;aspect-ratio:16/9;object-fit:cover;" />}
           <span class="card-meta">
             <span class={`league-chip ${post.data.league}`}>{post.data.league}</span>
           </span>
