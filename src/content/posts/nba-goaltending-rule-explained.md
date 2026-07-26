@@ -33,4 +33,4 @@ Goaltending applies to shot attempts. A related violation, basket interference, 
 
 ## Why the rule exists
 
-Without a goaltending rule, extremely tall or high-jumping defenders could simply swat away any shot near the rim regardless of trajectory, which would make finishing at the basket nearly impossible against elite shot blockers. The rule preserves the value of a well-placed shot that's already destined to go in.
+Without a goaltending rule, extremely tall or high-jumping defenders could simply swat away any shot near the rim regardless of trajectory, which would make finishing at the basket nearly impossible against elite shot blockers. The rule preserves the value of a well-placed shot that's already destined to go in. Updated
