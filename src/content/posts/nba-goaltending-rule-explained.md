@@ -12,7 +12,7 @@ tags: ["defense", "shot blocking", "violations"]
 Goaltending is called when a defender touches the ball while it is on its way down toward the basket, while it is above the rim level and could still enter the basket, or after it has touched the backboard during a shot attempt. When any of these happen, the basket counts automatically as if it had gone in.
 
 <div class="callout-violation">
-**Violation:** Blocking a shot while the ball is still rising, even if it's close to the rim, is not enough on its own. If the ball hasn't started its downward arc, it's a legal block.
+<strong>Violation:</strong> Blocking a shot while the ball is still rising, even if it's close to the rim, is not enough on its own. If the ball hasn't started its downward arc, it's a legal block.
 </div>
 
 ## The three conditions, broken down
@@ -24,7 +24,7 @@ A shot attempt is goaltending if any of the following is true at the moment of c
 - The ball has already touched the backboard and is still in the field of play above the rim
 
 <div class="callout-legal">
-**Legal:** Blocking a shot on its way up, swatting it away before it reaches its highest point, or touching the ball before it touches the backboard, are all clean blocks with no goaltending call.
+<strong>Legal:</strong> Blocking a shot on its way up, swatting it away before it reaches its highest point, or touching the ball before it touches the backboard, are all clean blocks with no goaltending call.
 </div>
 
 ## Basket interference vs. goaltending

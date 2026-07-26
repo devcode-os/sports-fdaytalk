@@ -14,7 +14,7 @@ Regular season overtime is a single 10-minute period. A coin toss decides who ge
 If the team that receives the opening kickoff scores only a field goal on its first possession, the other team gets a chance to answer. The game ends immediately if the first team scores a touchdown, or if the second team fails to score at all after getting the ball.
 
 <div class="callout-legal">
-**Legal:** A field goal on the opening possession does not end the game. The opposing team gets a possession to match or take the lead.
+<strong>Legal:</strong> A field goal on the opening possession does not end the game. The opposing team gets a possession to match or take the lead.
 </div>
 
 ## Regular season vs. playoffs
@@ -25,7 +25,7 @@ The regular season and playoffs use different overtime formats.
 - **Playoffs:** As many 15-minute periods as needed. Games cannot end in a tie, so overtime continues until a winner is decided.
 
 <div class="callout-violation">
-**Common misconception:** Sudden death is not automatic. Both playoff teams still get a possession unless the first team scores a touchdown, just like the regular season rule.
+<strong>Common misconception:</strong> Sudden death is not automatic. Both playoff teams still get a possession unless the first team scores a touchdown, just like the regular season rule.
 </div>
 
 ## Why the rule changed

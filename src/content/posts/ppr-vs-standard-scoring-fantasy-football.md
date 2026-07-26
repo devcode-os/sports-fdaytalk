@@ -12,7 +12,7 @@ tags: ["scoring formats", "draft strategy", "PPR"]
 Standard and PPR (Points Per Reception) leagues score rushing yards, receiving yards, and touchdowns identically. The entire difference comes down to one rule: PPR adds 1 point every time a player catches a pass, regardless of how many yards the catch gains.
 
 <div class="callout-legal">
-**Legal:** A 2-yard checkdown catch is worth exactly the same 1 reception point as a 60-yard catch in PPR scoring. Only the yardage bonus differs between them.
+<strong>Legal:</strong> A 2-yard checkdown catch is worth exactly the same 1 reception point as a 60-yard catch in PPR scoring. Only the yardage bonus differs between them.
 </div>
 
 ## Why this changes player value
@@ -28,7 +28,7 @@ Because receptions themselves carry point value in PPR, running backs and receiv
 Pass-catching running backs and slot receivers see the largest value swing between formats. A running back who catches 70 short passes a season can gain 70 additional points in full PPR that a standard league simply doesn't award, often enough to change his draft position by multiple rounds.
 
 <div class="callout-violation">
-**Common mistake:** Drafting purely off standard-league rankings in a PPR league undervalues high-target players and overvalues touchdown-dependent players who catch fewer passes.
+<strong>Common mistake:</strong> Drafting purely off standard-league rankings in a PPR league undervalues high-target players and overvalues touchdown-dependent players who catch fewer passes.
 </div>
 
 ## Which format is more common

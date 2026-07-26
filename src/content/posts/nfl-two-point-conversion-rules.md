@@ -12,7 +12,7 @@ tags: ["scoring", "conversions", "strategy"]
 After a touchdown, a team can choose to attempt a two-point conversion instead of kicking the standard extra point. The offense lines up at the 2-yard line and runs one play, a run or pass, that must reach the end zone the same way a touchdown does.
 
 <div class="callout-legal">
-**Legal:** The defense can also score on a two-point attempt. If the defense intercepts or recovers a fumble and returns it the length of the field, it's worth 2 points for the defense.
+<strong>Legal:</strong> The defense can also score on a two-point attempt. If the defense intercepts or recovers a fumble and returns it the length of the field, it's worth 2 points for the defense.
 </div>
 
 ## Point value comparison
